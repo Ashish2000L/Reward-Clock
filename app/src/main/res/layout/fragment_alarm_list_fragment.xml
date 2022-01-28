@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".alarm_list_fragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:id="@+id/button_holder_fragment"
+        android:gravity="center">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/alarm_recycle"
+            android:visibility="gone"
+            android:fadingEdge="vertical"
+            android:fadeScrollbars="true"
+            android:fadingEdgeLength="20dp"
+            android:requiresFadingEdge="vertical"
+            android:focusable="true"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New alarm"
+            android:id="@+id/add_new_alarm_frag"/>
+
+    </RelativeLayout>
+</FrameLayout>

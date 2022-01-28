@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_body"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/time_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingTop="30dp"
+        android:paddingBottom="10dp"
+        android:paddingHorizontal="10dp"
+        android:gravity="center"
+        android:elevation="-1dp"
+        android:orientation="horizontal"
+        android:onClick="OnToggleClicked">
+
+        <TextView
+            android:id="@+id/hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dongle_bold"
+            android:gravity="center"
+            android:hint=" _ _ "
+            android:textColor="#9855F6"
+            android:textColorHint="#9855F6"
+            android:textSize="55sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="55sp"
+            android:textStyle="bold"
+            android:textColor="#9855F6"
+            android:paddingHorizontal="2dp"
+            android:fontFamily="@font/dongle_bold"
+            android:text=":"/>
+
+        <TextView
+            android:id="@+id/minutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dongle_bold"
+            android:gravity="center"
+            android:hint=" _ _ "
+            android:textColor="#9855F6"
+            android:textColorHint="#9855F6"
+            android:textSize="55sp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            >
+        <TextView
+            android:id="@+id/amtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dongle_regular"
+            android:gravity="center"
+            android:hint="AM"
+            android:paddingHorizontal="4dp"
+            android:layout_gravity="center"
+            android:textColor="@color/select_background_ampm"
+
+            android:textSize="27sp"/>
+
+            <TextView
+                android:id="@+id/pmtv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dongle_regular"
+                android:paddingHorizontal="4dp"
+                android:gravity="center"
+                android:hint="PM"
+                android:layout_gravity="center"
+                android:textColor="@color/select_background_ampm"
+                android:textSize="28sp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/edit_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/edit_create"
+            />
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etmsg"
+        app:layout_constraintTop_toBottomOf="@+id/time_linear_layout"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="18sp"
+        android:hint="Enter your message"
+        android:layout_marginTop="20dp"
+        />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_set_alarm"
+        app:layout_constraintTop_toBottomOf="@id/etmsg"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Set Alarm"
+        android:onClick="onClickSetAlarm"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

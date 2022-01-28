@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".test_activity"
+    android:gravity="center"
+    android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Record ID"
+
+        style="@style/Animation.Design.BottomSheetDialog"
+        android:layout_marginTop="38dp"
+        android:id="@+id/t3"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="First Name"
+        android:layout_marginTop="38dp"
+        style="@style/Animation.Design.BottomSheetDialog"
+        android:id="@+id/t1"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Last Name"
+        style="@style/Animation.Design.BottomSheetDialog"
+        android:layout_marginTop="38dp"
+        android:id="@+id/t2"/>
+</LinearLayout>
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Save to room"
+        android:textStyle="bold"
+        style="@style/Widget.MaterialComponents.FloatingActionButton"
+        android:layout_marginTop="38dp"
+        android:id="@+id/b1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recview"/>
+    </LinearLayout>
+</LinearLayout>

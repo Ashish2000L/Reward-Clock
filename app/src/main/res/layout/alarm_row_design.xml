@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="58dp"
+    android:layout_margin="10dp"
+    android:background="#00FF1D1D"
+    app:layoutDescription="@xml/alarm_row_design_scene">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="20dp"
+        android:foregroundTint="@color/black"
+        app:cardBackgroundColor="#A06CFF"
+        app:cardCornerRadius="10dp" />
+
+        <ImageView
+            android:id="@+id/day_img"
+            android:layout_width="50dp"
+            android:elevation="10dp"
+            app:layout_constraintStart_toStartOf="@id/card_back"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:src="@drawable/glowing_sun" />
+
+        <TextView
+            android:id="@+id/time_text"
+            android:layout_width="104dp"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toEndOf="@id/day_img"
+            android:gravity="center"
+            android:elevation="10dp"
+            android:paddingHorizontal="3dp"
+            android:textSize="35sp"
+            android:textColor="@color/white"
+            tools:text="07:30" />
+
+        <TextView
+            android:id="@+id/am_pm_text"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:elevation="10dp"
+            app:layout_constraintStart_toEndOf="@+id/time_text"
+            android:gravity="bottom"
+            android:paddingHorizontal="3dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            tools:text="AM" />
+
+        <Switch
+            android:id="@+id/off_on_switch"
+            style="@style/TextAppearance.AppCompat.Widget.Switch"
+            app:layout_constraintStart_toEndOf="@+id/am_pm_text"
+            android:elevation="10dp"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:paddingStart="10dp" />
+
+        <ImageButton
+            android:id="@+id/edit_img_btn"
+            android:layout_width="45dp"
+            android:elevation="10dp"
+            app:layout_constraintStart_toEndOf="@id/off_on_switch"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:paddingHorizontal="5dp"
+            android:backgroundTint="#A06CFF"
+            android:requiresFadingEdge="horizontal"
+            android:src="@drawable/edit_create"
+            android:tint="#FAF9FB" />
+
+<!--        <ImageView-->
+<!--            android:id="@+id/drag_img"-->
+<!--            android:layout_width="35dp"-->
+<!--            android:scaleType="fitStart"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:backgroundTint="#EAE6E6"-->
+<!--            android:requiresFadingEdge="horizontal"-->
+<!--            android:elevation="10dp"-->
+<!--            android:src="@drawable/drag_handler"-->
+<!--            app:layout_constraintStart_toEndOf="@id/edit_img_btn"-->
+<!--            android:rotation="90"-->
+<!--            android:visibility="gone"-->
+<!--            android:tint="#595151" />-->
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/delete_background_cover"-->
+<!--        android:layout_width="80dp"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:cardCornerRadius="3dp"-->
+<!--        android:elevation="-10dp"-->
+<!--        android:background="@drawable/alarm_table_style"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        />-->
+
+    <TextView
+        android:id="@+id/tablebackground"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:elevation="2dp"
+        android:background="@drawable/alarm_table_style"
+        app:layout_constraintEnd_toEndOf="@id/card_back"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <ImageButton
+        android:id="@+id/delete_alarm"
+        android:layout_width="35dp"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:backgroundTint="#989797"
+        android:requiresFadingEdge="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="visible"
+        android:elevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/delete"
+        android:tint="#905DED" />
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Reward Clock</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <dimen name="corner_cut">6dp</dimen>
+    <dimen name="clock_stroke_dim">1dp</dimen>
+
+</resources>
